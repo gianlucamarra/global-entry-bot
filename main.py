@@ -16,7 +16,7 @@ LOCATIONS = [
     ('LAX', 5180)
 ]
 
-DELTA = 36  # Weeks
+DELTA = 4  # Weeks
 
 SCHEDULER_API_URL = 'https://ttp.cbp.dhs.gov/schedulerapi/locations/{location}/slots?startTimestamp={start}&endTimestamp={end}'
 TTP_TIME_FORMAT = '%Y-%m-%dT%H:%M'
@@ -25,9 +25,9 @@ NOTIF_MESSAGE = 'New appointment slot open at {location}: {date}'
 MESSAGE_TIME_FORMAT = '%A, %B %d, %Y at %I:%M %p'
 
 def tweet(message):
-    api=tweepy.API(auth)
+    api = twitter.Api(**twitter_credentials)
     try:
-        api.update_status(message)
+        api.PostUpdate(message)
     except twitter.TwitterError as e:
         if len(e.message) == 1 and e.message[0]['code'] == 187:
             logging.info('Tweet rejected (duplicate status)')
