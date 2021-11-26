@@ -12,8 +12,8 @@ LOGGING_FORMAT = '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
 
 # LAX is good for testing
 LOCATIONS = [
-    ('SFO', 5446),
-    # ('LAX', 5180)
+    #('SFO', 5446),
+    ('LAX', 5180)
 ]
 
 DELTA = 4  # Weeks
