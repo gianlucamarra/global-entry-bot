@@ -5,8 +5,21 @@ import sys
 
 import requests
 import twitter
+import tweepy
 
-from secrets import twitter_credentials
+consumer_key='nODFKjiYzrF19xYefvQ6V1Npp'
+consumer_secret_key='OI0ubjR7i3G2VfFzqzeZuehuh7ytyuZeSHPar9zI8qXPXjfSzC'
+access_token='1463947072403652618-scdxO96qAWUFoGePy4ZLSoDmLRBeys'
+access_token_secret='LQipk1e8UWMIvhKgKPwhETEFIJ8UprzMfHppvPL8CrDqB'
+bearer_token='AAAAAAAAAAAAAAAAAAAAAHe8WAEAAAAAFOdG5KkJtdyPz05w%2FR2DYoJvs%2B4%3DpgO894Z6ltPgNyOqiiRJsjXgxTynzrybLmfegqzU8xJUGN0GkN'
+
+
+
+tweeter_obj = tweepy.Client(bearer_token=bearer_token, consumer_key=consumer_key, consumer_secret=consumer_secret_key,
+                            access_token=access_token, access_token_secret=access_token_secret,
+                            wait_on_rate_limit=True)
+
+
 
 LOGGING_FORMAT = '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
 
@@ -25,9 +38,9 @@ NOTIF_MESSAGE = 'New appointment slot open at {location}: {date}'
 MESSAGE_TIME_FORMAT = '%A, %B %d, %Y at %I:%M %p'
 
 def tweet(message):
-    api = twitter.Api(**twitter_credentials)
+
     try:
-        api.PostUpdate(message)
+        tweeter_obj.create_tweet(text=message)
     except twitter.TwitterError as e:
         if len(e.message) == 1 and e.message[0]['code'] == 187:
             logging.info('Tweet rejected (duplicate status)')
