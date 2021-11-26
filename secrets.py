@@ -5,11 +5,11 @@
 
 
 #variables for accessing twitter API
-consumer_key='Dm9SMFE5ZTbt6WocJ5FKqMEF4'
-consumer_secret_key='GfO05LPZaatzwGs7OqEUku3ROQZPztQo2u2zQHfxkCRAkJmqML'
-access_token='1463947072403652618-RgLN9btVDl0TqGx70IzVYXrrgKSlq9'
-access_token_secret='2dWNl2iYRVHc2FBGJyPYl8IjnehXipe6wIjKCILbWHrXH'
-bearer_token='AAAAAAAAAAAAAAAAAAAAAHe8WAEAAAAA4eT8YnLcsl2yRzXvgRb9rLnSo%2Fg%3D8APTjm2PU9s6mmbFzf6cDkWUy9pcsYPiakrl8zVZmS70veBHF3'
+consumer_key='OBXhr3CXzYKv3IiLrk4MF7NND'
+consumer_secret_key='TdwGKTVR5ff44BusKl9WdccjvRXIBHfHapM2pSfTrTO7vMHUz5'
+access_token='1463947072403652618-WW8rxQwz4hnwBKnsLPt16Infs4umYY'
+access_token_secret='L6zl3LVrEFcjKRCMC9vRpHAiCfS5JUiXnNFUWcgrw8l5c'
+bearer_token='AAAAAAAAAAAAAAAAAAAAAHe8WAEAAAAA3FJAgfhrrmOmw5oYmcxYO98uQz0%3DbTEp7YtYe5Mtml4xjBfPn1HeB7Ll8IMZWLRVFGjOIYx2Sv8oqL'
 
 
 
