@@ -6,13 +6,7 @@ import sys
 import requests
 import twitter
 import tweepy
-
-consumer_key='nODFKjiYzrF19xYefvQ6V1Npp'
-consumer_secret_key='OI0ubjR7i3G2VfFzqzeZuehuh7ytyuZeSHPar9zI8qXPXjfSzC'
-access_token='1463947072403652618-scdxO96qAWUFoGePy4ZLSoDmLRBeys'
-access_token_secret='LQipk1e8UWMIvhKgKPwhETEFIJ8UprzMfHppvPL8CrDqB'
-bearer_token='AAAAAAAAAAAAAAAAAAAAAHe8WAEAAAAAFOdG5KkJtdyPz05w%2FR2DYoJvs%2B4%3DpgO894Z6ltPgNyOqiiRJsjXgxTynzrybLmfegqzU8xJUGN0GkN'
-
+from secrets import consumer_key, consumer_secret_key, access_token, access_token_secret, bearer_token
 
 
 tweeter_obj = tweepy.Client(bearer_token=bearer_token, consumer_key=consumer_key, consumer_secret=consumer_secret_key,
@@ -29,7 +23,7 @@ LOCATIONS = [
     ('LAX', 5180)
 ]
 
-DELTA = 4  # Weeks
+DELTA = 36  # Weeks
 
 SCHEDULER_API_URL = 'https://ttp.cbp.dhs.gov/schedulerapi/locations/{location}/slots?startTimestamp={start}&endTimestamp={end}'
 TTP_TIME_FORMAT = '%Y-%m-%dT%H:%M'
