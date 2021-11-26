@@ -6,8 +6,7 @@ import sys
 import requests
 import twitter
 import tweepy
-
-
+from secrets import consumer_key, consumer_secret_key, access_token, access_token_secret, bearer_token
 
 
 tweeter_obj = tweepy.Client(bearer_token=bearer_token, consumer_key=consumer_key, consumer_secret=consumer_secret_key,
