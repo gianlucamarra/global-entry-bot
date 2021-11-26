@@ -14,4 +14,6 @@ access_token_secret='41YXimkgAwIse628WW2t2JWo2POdj5IFz6H7wVdgtkBqc'
 auth=tweepy.OAuthHandler(consumer_key,consumer_secret_key)
 auth.set_access_token(access_token,access_token_secret)
 api=tweepy.API(auth)
-print("Done")
+tweet=input('one time')
+#Generate text tweet
+api.update_status(tweet)
