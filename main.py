@@ -20,10 +20,13 @@ LOGGING_FORMAT = '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
 # LAX is good for testing
 LOCATIONS = [
     #('SFO', 5446),
-    ('LAX', 5180)
+    #('LAX', 5180),
+     ('RIC', 14981),
+     ('TPA', 8020),
+     ('IOW', 16461)
 ]
 
-DELTA = 36  # Weeks
+DELTA = 50  # Weeks
 
 SCHEDULER_API_URL = 'https://ttp.cbp.dhs.gov/schedulerapi/locations/{location}/slots?startTimestamp={start}&endTimestamp={end}'
 TTP_TIME_FORMAT = '%Y-%m-%dT%H:%M'
