@@ -16,7 +16,7 @@ LOCATIONS = [
     ('LAX', 5180)
 ]
 
-DELTA = 32  # Weeks
+DELTA = 36  # Weeks
 
 SCHEDULER_API_URL = 'https://ttp.cbp.dhs.gov/schedulerapi/locations/{location}/slots?startTimestamp={start}&endTimestamp={end}'
 TTP_TIME_FORMAT = '%Y-%m-%dT%H:%M'
