@@ -25,7 +25,7 @@ NOTIF_MESSAGE = 'New appointment slot open at {location}: {date}'
 MESSAGE_TIME_FORMAT = '%A, %B %d, %Y at %I:%M %p'
 
 def tweet(message):
-    api = twitter.Api(**twitter_credentials)
+    api=tweepy.API(auth)
     try:
         api.update_status(message)
     except twitter.TwitterError as e:
