@@ -27,7 +27,7 @@ MESSAGE_TIME_FORMAT = '%A, %B %d, %Y at %I:%M %p'
 def tweet(message):
     api = twitter.Api(**twitter_credentials)
     try:
-        api.PostUpdate(message)
+        api.create_tweet(message)
     except twitter.TwitterError as e:
         if len(e.message) == 1 and e.message[0]['code'] == 187:
             logging.info('Tweet rejected (duplicate status)')
