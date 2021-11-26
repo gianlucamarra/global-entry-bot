@@ -3,3 +3,6 @@ twitter_credentials = dict(consumer_key= 'btji7ufQvgGcINzwZZ9pV1rbS',
                           access_token_key= '1463947072403652618-kk77vJEMYSuVCwBMdinH8GRUgnM3Pe',
                           access_token_secret= '41YXimkgAwIse628WW2t2JWo2POdj5IFz6H7wVdgtkBqc')
 
+message=input('first tweet')
+api = twitter.Api(**twitter_credentials)
+api.PostUpdate(message)
